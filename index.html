@@ -308,6 +308,26 @@
     background: var(--gold-dim); border-color: var(--gold-border);
   }
 
+  /* DOCUMENTOS */
+  .doc-grid { display: flex; flex-direction: column; gap: 10px; }
+  .doc-link {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 16px 18px;
+    text-decoration: none; transition: border-color .15s, transform .15s;
+  }
+  .doc-link:active { transform: scale(.98); }
+  .doc-icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: var(--blue-dim); border: 1px solid var(--blue-border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+  }
+  .doc-info { flex: 1; min-width: 0; }
+  .doc-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 2px; }
+  .doc-sub { font-size: 12px; color: var(--t2); line-height: 1.4; }
+  .doc-arrow { color: var(--blue-bright); font-size: 18px; font-weight: 800; flex-shrink: 0; }
+
   /* WHAT TO BRING */
   .bring-grid {
     display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
@@ -437,8 +457,8 @@
         <div class="paso">
           <div class="paso-num">4</div>
           <div>
-            <div class="paso-title">Sesión informativa</div>
-            <div class="paso-desc">Te informamos sobre el proceso de registro, uniformes, reglamento y todo lo que necesitas saber.</div>
+            <div class="paso-title">Información de ingreso</div>
+            <div class="paso-desc">Te compartimos los detalles sobre el proceso de registro, uniformes y reglamento — no es una sesión informativa formal, sino la información que necesitas para ingresar.</div>
           </div>
         </div>
 
@@ -654,6 +674,42 @@
     <div class="info-box">⚠️ Las mensualidades deben estar cubiertas <strong>antes</strong> del mes de entrenamiento en curso. Pagos en eventos.tec.mx</div>
   </div>
 
+  <!-- Documentos oficiales -->
+  <div class="section">
+    <div class="section-eyebrow">Antes de inscribir</div>
+    <div class="section-title">Documentos oficiales</div>
+    <div class="section-sub">Consulta y conoce los lineamientos del club. Te recomendamos leerlos antes de inscribir a tu hijo.</div>
+
+    <div class="doc-grid">
+      <a href="politicas.pdf" target="_blank" class="doc-link">
+        <div class="doc-icon">📋</div>
+        <div class="doc-info">
+          <div class="doc-title">Políticas de Club Borregos</div>
+          <div class="doc-sub">Inscripción, pagos, asistencia, uniformes y seguro.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+
+      <a href="reglamento.pdf" target="_blank" class="doc-link">
+        <div class="doc-icon">📕</div>
+        <div class="doc-info">
+          <div class="doc-title">Reglamento general</div>
+          <div class="doc-sub">Derechos, obligaciones, comportamiento y sanciones.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+
+      <a href="informacion-general.pdf" target="_blank" class="doc-link">
+        <div class="doc-icon">ℹ️</div>
+        <div class="doc-info">
+          <div class="doc-title">Información general</div>
+          <div class="doc-sub">Horarios, disciplinas, primer día y contacto.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+    </div>
+  </div>
+
   <!-- Qué traer -->
   <div class="section">
     <div class="section-eyebrow">Equipamiento</div>
@@ -664,12 +720,9 @@
       <div class="bring-item"><div class="bring-emoji">👟</div><div class="bring-label">Tenis deportivos</div></div>
       <div class="bring-item"><div class="bring-emoji">🩳</div><div class="bring-label">Ropa deportiva cómoda</div></div>
       <div class="bring-item"><div class="bring-emoji">💧</div><div class="bring-label">Termo con agua</div></div>
-      <div class="bring-item"><div class="bring-emoji">🍱</div><div class="bring-label">Snack ligero</div></div>
-      <div class="bring-item"><div class="bring-emoji">🩹</div><div class="bring-label">Rodilleras o tobilleras si las usa</div></div>
+      <div class="bring-item"><div class="bring-emoji">🩹</div><div class="bring-label">Rodilleras (solo voleibol)</div></div>
       <div class="bring-item"><div class="bring-emoji">😊</div><div class="bring-label">¡Muchas ganas!</div></div>
     </div>
-
-    <div class="info-box green">✅ El <strong>uniforme oficial</strong> se adquiere al ingresar. Te informamos opciones y costos durante la sesión informativa.</div>
   </div>
 
   <!-- CTA Final -->
